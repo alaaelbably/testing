@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Ubuntu, sans-serif;
+}
+body {
+  background-color: #100d28;
+  min-height: 250vh;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* NAV BAR SECTION */
+.navbar-toggler{
+  background-color: #fff;
+}
+.nav-link {
+  padding: 7px;
+  color: white !important;
+}
+.nav-link:hover {
+  padding: 5px;
+  background-color: #c484f1;
+  text-decoration: underline;
+  border-radius: 3px;
+}
+.logo-img {
+  width: 50%;
+}
+.logo-img img {
+  width: 125px;
+}
+.navbar {
+  background-color: #100d28;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+}
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+.my-nav-all {
+  background-color: pink;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
+}
+.my-nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.my-nav-list a:hover {
+  color: #c484f1;
+  text-decoration: underline;
+}
+.my-nav-content {
+  width: 50%;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.nav-toggle {
+  display: none;
+  color: #fff;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* HOME SECTION */
+.cover-home {
+  height: 95vh;
+  color: white;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cover-img {
+  width: 40%;
+}
+.cover-text {
+  width: 40%;
+  margin-left: 10px;
+  padding-top: 25px;
+}
+.buttontouch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  color: white;
+  z-index: 0;
+}
+.buttontouch:hover {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.buttontouch:active {
+  transform: scale(0.97);
+}
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.hoverEffect div {
+  background: rgb(193, 228, 248);
+  color: white;
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+.buttontouch:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+#acc-icons {
+  display: none;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* ABOUT US SECTION */
+.about-us h1,
+p {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.about-us {
+  color: white;
+}
+.projects {
+  margin: auto;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.projectcard {
+  height: 250px;
+  width: 250px;
+}
+.projectcard img {
+  height: 200px;
+  width: 200px;
+  margin: 10px 0px 10px 0px;
+}
+.button-text a:hover {
+  color: white;
+  text-decoration: underline;
+}
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #c484f1;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: white;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* SERVICES SECTION */
+.footersection {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.services-all h1 {
+  color: white;
+  text-align: center;
+}
+.services {
+  height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.service-card {
+  flex-wrap: wrap;
+  padding-left: 5px;
+  display: flex;
+  width: 30%;
+  height: 100px;
+  color: white;
+}
+.service-card:hover {
+  border-radius: 5px;
+  padding: 5px;
+  /* border: 1px solid #c484f1; */
+  box-shadow: 4px 4px #c484f1;
+}
+.serviceicon {
+  width: 25%;
+}
+.serviceicon i {
+  font-size: 50px;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* PRICING SECTION */
+.pricing {
+  width: 90%;
+  margin: auto;
+}
+.pricing h1 {
+  color: white;
+  padding-bottom: 10px;
+}
+.pricecards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.onecard {
+  color: white;
+  margin-inline: 9px;
+  margin-bottom: 25px;
+  padding: 7px;
+  width: 30%;
+}
+.gold {
+  background-color: gainsboro;
+  color: #100d28 !important;
+  transform: scale(1.1);
+  border-radius: 7px;
+  border: 1.5px solid #c5941a;
+}
+.pricing h1,
+h5 {
+  text-align: center;
+}
+.onecard:hover {
+  border-radius: 7px;
+  border: 1px solid #c5941a;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* FOOTER SECTION */
+.bottomfooter {
+  color: white;
+  font-size: 60px;
+}
+.my-footer p {
+  margin-top: 5px;
+  text-align: center;
+}
+.my-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  color: white;
+  border-top: #c484f1 solid 1px;
+  background-color: #100d28;
+}
+.footer-sec1 {
+  width: 30%;
+  background-color: white;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+}
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  /* background-color: rgb(20, 20, 20); */
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+.svgIcon path {
+  fill: #c484f1;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* UP BUTTON */
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  align-items: center;
+}
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: #c484f1;
+  font-size: 0px;
+}
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+.up {
+  /* background-color: #100d28; */
+  background-color: white;
+  position: fixed;
+  bottom: 45px;
+  right: -70px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+.up.show {
+  right: 35px;
+}
+.my-footer0 {
+  background-color: #100d28;
+  display: flex;
+  justify-content: space-around;
+}
+.my-footer0 img {
+  width: 135px;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE CODES */
+@media (max-width: 850px) {
+  .my-nav-content {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .about-us p {
+    display: none;
+  }
+  .about-us {
+    display: block;
+  }
+  .projects {
+    min-height: 270vh;
+  }
+  .projectcard {
+    display: block;
+    height: 300px;
+    width: 80%;
+  }
+  .services {
+    display: block;
+  }
+  .services-all {
+    display: block;
+    height: 210vh;
+  }
+  .service-card {
+    margin: 25px;
+    width: 90%;
+  }
+  .pricecards {
+    display: block;
+  }
+  .onecard {
+    margin-inline: auto;
+    width: 90%;
+  }
+  .my-footer {
+    padding-top: 10px;
+    display: block;
+  }
+}
+
